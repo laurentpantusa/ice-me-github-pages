@@ -62,9 +62,50 @@
 <div id="wrapper">
   <h1>DEGUSTEZ UNE GLACE</h1>
   <h2>Maintenant, tout de suite</h2>
-  <button type="button" class="btn btn-primary">Commander</button>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#orderform">>Commander</button>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="orderform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Commander</h4>
+        </div>
+      <div class="modal-body">
+        <div id="wufoo-z1hm6hpz1xtk1aq">
+
+          Fill out my <a href="https://bozzo.wufoo.com/forms/z1hm6hpz1xtk1aq">online form</a>.
+          </div>
+          <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">HTML Forms powered by <a href="http://www.wufoo.com">Wufoo</a>.</div>
+          <script type="text/javascript">var z1hm6hpz1xtk1aq;(function(d, t) {
+          var s = d.createElement(t), options = {
+          'userName':'bozzo',
+          'formHash':'z1hm6hpz1xtk1aq',
+          'autoResize':true,
+          'height':'466',
+          'async':true,
+          'host':'wufoo.com',
+          'header':'show',
+          'ssl':true};
+          s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+          s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+          try { z1hm6hpz1xtk1aq = new WufooForm();z1hm6hpz1xtk1aq.initialize(options);z1hm6hpz1xtk1aq.display(); } catch (e) {}};
+          var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+          })(document, 'script');</script>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="spacer"></div>
 
