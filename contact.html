@@ -56,111 +56,54 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
-
-
-<div id="wrapper">
-  <h1>DEGUSTEZ UNE GLACE</h1>
-  <h2>Maintenant, tout de suite</h2>
-
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#orderform">>Commander</button>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="orderform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-     <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Commander</h4>
-        </div>
-      <div class="modal-body">
-        <div id="wufoo-z1hm6hpz1xtk1aq">
-
-          Fill out my <a href="https://bozzo.wufoo.com/forms/z1hm6hpz1xtk1aq">online form</a>.
-          </div>
-          <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">HTML Forms powered by <a href="http://www.wufoo.com">Wufoo</a>.</div>
-          <script type="text/javascript">var z1hm6hpz1xtk1aq;(function(d, t) {
-          var s = d.createElement(t), options = {
-          'userName':'bozzo',
-          'formHash':'z1hm6hpz1xtk1aq',
-          'autoResize':true,
-          'height':'466',
-          'async':true,
-          'host':'wufoo.com',
-          'header':'show',
-          'ssl':true};
-          s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-          s.onload = s.onreadystatechange = function() {
-          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-          try { z1hm6hpz1xtk1aq = new WufooForm();z1hm6hpz1xtk1aq.initialize(options);z1hm6hpz1xtk1aq.display(); } catch (e) {}};
-          var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-          })(document, 'script');</script>
-  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="spacer"></div>
 
-
-
-<div class="container text-center">
+<div class="container">
   <div class="row">
-    <div class="col-sm-6 col-md-3 feature">
-        <img src="image/icon_57707/icon_57707.png"alt="icecream" class="circle">
-        <p>Choisissez votre parfum parmis notre catalogue de 100 glaces maison </p>
-        
-    </div>
-    <div class="col-sm-6 col-md-3 feature">
-         <img src="image/icon_17805/icon_17805.png"alt="dollar" class="circle">
-        <p>Payez facilement</p>
-       
-    </div>
-    <div class="col-sm-6 col-md-3 feature">    
-        <img src="image/icon_29388/icon_29388.png"alt="locate" class="circle">
-        <p>Commander de chez vous</p>
-        
-    </div>
-    <div class="col-sm-6 col-md-3 feature">  
-         <img src="image/icon_24755/icon_24755.png"alt="icetruck" class="circle">
-        <p>Nous vous livrons</p>
-       
-    </div>
+   <div class="col-sm-6">
+
+      <div id="map" style="width: 100%; height: 400px;"></div>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+      <script type="text/javascript">
+        var myLatlng = new google.maps.LatLng(50.8503396,4.351710300000036);
+        var myOptions = {
+            zoom: 12,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), myOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: "You are here!"
+        });
+      </script>
+
+        </div>
+  <div class="col-sm-6">
+  <h1>Contact</h1>
+  <p><i class="fa fa-map-marker" aria-hidden="true"></i>25, rue du petit Musk</p>
+  <p><i class="fa fa-mobile" aria-hidden="true"></i> 0475 89 76 97</p>
+  </div>
   </div>
 </div>
-    
+
+ 
+
 <div class="spacer"></div>
 
-<div class="vertical-spacer"></div>
+
+
+    
+
+
+
 <div class="container">
   <div class="row">
   <div class="col-xs-12 text-center">
-<!-- Begin MailChimp Signup Form -->
-        
-        <h2>Inscrivez-vous à notre newsletter</h2>
 
-
-        <form action="http://bozzo.us12.list-manage.com/subscribe/post?u=4c2491fc7aaccbcc7cd4f2ddb&amp;id=98670cc256" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
-
-          
-          <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-
-
-
-            <input type="submit" value="Suivez-nous" name="Subscribe" id="mc-embedded-subscribe" class="button btn btn-primary">
-
-            </form>
-
-
-<!--End mc_embed_signup-->
   </div>
   </div>
 </div>
